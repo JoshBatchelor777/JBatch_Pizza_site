@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pizza Planet</title>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+		<meta content="width=device-width,initial-scale=1.0" name="viewport">
+		<style>#menuBG{width:400px;height:470px;margin:10px auto;}#frmMenu{width:400px;height:200px;}
+		#totalPrice{width:200px;height:190px;margin:0 auto;float:right;}.left{width:200px;height:200px;float:left;}
+		.right{width:200px;height:235px;float:right;}#showText{width:200px;height:190px;margin:0px auto;float:left;}
+		#cart{top:0;margin:0px auto;width:400px;height:200px;}#btnOrder{margin:10px 0px 0px 100px;width:100px;height:40px}
+		</style>
+	</head>
+	<body style="background-color:#73d0ff;">
+		<div id="menuBG">
+			<h1 style="text-align:center;margin:auto;">Welcome to Pizza Planet!</h1><br>
+			<span style="text-align:center;margin:auto;">Please build a pizza then click "Place Order"</span>
+			<input id="btnOrder" type="button" onclick="getReceipt()"
+				value="Place Order">
+			<form id="frmMenu">
+				<div class="menu left">
+					<h3>Size:</h3>
+					<input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
+					<input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
+					<input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
+					<input class="size" type="radio" name="Size" value="Extra Large Pizza"> Extra Large Pizza<br>
+				</div>
+				<div class="menu right">
+					<h3>Meats:</h3>
+					<input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
+					<input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage <br>
+					<input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br> 
+					<input class="meats" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef<br>
+					<input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy<br>
+					<input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken<br>
+				</div>
+				<div class="menu left">
+					<h3>Cheese:</h3>
+					<input class="cheese" type="radio" name="Cheese" value="Regular"> Regular<br>
+					<input class="cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="Extra Cheese" checked> Extra Cheese<br>
+				</div>
+				<div class="menu left">
+					<h3>Crust:</h3>
+					<input class="crust" type="radio" name="Crust" value="Plain Crust"> Plain Crust<br>
+					<input class="crust" type="radio" name="Crust" value="Garlic Butter Crus"> Garlic Butter Crust<br>
+					<input class="crust" type="radio" name="Crust" value="Cheese Stuffed Crust" checked> Cheese Stuffed Crust<br>
+					<input class="crust" type="radio" name="Crust" value="Spicy Crust"> Spicy Crust<br>
+					<input class="crust" type="radio" name="Crust" value="House Special Crus"> House Special Crust<br>
+				</div>
+				<div class="menu left">
+					<h3>Sauce:</h3>
+					<input class="sauce" type="radio" name="Sauce" value="Marinara Sauce"> Marinara Sauce<br>
+					<input class="sauce" type="radio" name="Sauce" value="White Sauce"> White Sauce<br>
+					<input class="sauce" type="radio" name="Sauce" value="Barbeque Sauce" checked> Barbeque Sauce<br>
+					<input class="sauce" type="radio" name="Sauce" value="No Sauce"> No Sauce<br>
+				</div>
+				<div class="menu right">
+					<h3>Veggies:</h3>
+					<input class="veggies" type="checkbox" name="Veggies" value="Tomatoes" checked> Tomatoes<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Onions"> Onions<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Olives"> Olives<br> 
+					<input class="veggies" type="checkbox" name="Veggies" value="Green Peppers"> Green Peppers<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Mushrooms"> Mushrooms<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Pineapple"> Pineapple<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Spinach"> Spinach<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Jalapeno" > Jalapeno<br>
+				</div>
+				
+				
+				<div>
+					<p style="float:left;">
+						<li>Personal pizza = $6.00</li>
+						<br>
+						<li>Medium pizza = $10.00</li>
+						<br>
+						<li>Large pizza = $14.00</li>
+						<br>
+						<li>XLarge pizza = $16.00</li>
+						<br>
+					</p>
+					<p style="float:right;">
+						<li>
+						Additional Meat items (first one is complementary):
+						+$1.00 each additional meat items beyond the first complementary meat item</li>
+<br>
+						<li>Additional Veggie items (first one is complementary):
+						+$1.00 each additional veggie items beyond the first complementary veggie item</li>
+<br>
+						<li>Extra Cheese:
+						+$3.00 for any size pizza</li>
+<br>
+						<li>Crust:
+						+$3.00 for Cheese Stuffed Crust. All other crusts are complementary.</li>
+<br>					
+					</p>
+				</div>
+				<div id="cart">
+					<div id="showText">CART: </div>
+					<div id="totalPrice"></div>
+				</div>
+			</form>
+		</div>
+		<script src="./js/psite.js"></script>
+	</body>
+</html>
